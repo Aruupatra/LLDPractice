@@ -1,10 +1,12 @@
-package LoggingAdvanceLibrary;
+package LoggingAdvanceLibrary.Logs;
+
+import LoggingAdvanceLibrary.LogFactory;
 
 public class PrintLog implements LogTarget{
 
     String logLevel;
     static{
-        LogFactory.register("print",config ->
+        LogFactory.register("print", config ->
                 {
                     System.out.println(config);
                     return new PrintLog(config.logLevel);

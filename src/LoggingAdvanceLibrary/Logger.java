@@ -2,11 +2,12 @@ package LoggingAdvanceLibrary;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.lang.annotation.Target;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import LoggingAdvanceLibrary.Logs.LogTarget;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 public class Logger {
@@ -16,8 +17,8 @@ public class Logger {
     public Logger(boolean isSync)
     {
         try {
-            Class.forName("LoggingAdvanceLibrary.PrintLog");
-            Class.forName("LoggingAdvanceLibrary.DbLog");
+            Class.forName("LoggingAdvanceLibrary.Logs.PrintLog");
+            Class.forName("LoggingAdvanceLibrary.Logs.DbLog");
             // same for other targets: DbLogTarget, UrlLogTarget, etc.
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);

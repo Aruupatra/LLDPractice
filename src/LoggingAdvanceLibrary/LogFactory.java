@@ -1,13 +1,15 @@
 package LoggingAdvanceLibrary;
 
+import LoggingAdvanceLibrary.Logs.LogTarget;
+
 import java.util.HashMap;
 import java.util.function.Function;
 
 public class LogFactory {
 
-     static HashMap<String, Function<LogConfig,LogTarget>> registry=new HashMap<>();
+     static HashMap<String, Function<LogConfig, LogTarget>> registry=new HashMap<>();
 
-     static void register(String type, Function<LogConfig,LogTarget> targetFunction)
+     public static void register(String type, Function<LogConfig, LogTarget> targetFunction)
      {
          registry.put(type,targetFunction);
      }

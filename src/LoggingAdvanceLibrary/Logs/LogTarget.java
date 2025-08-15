@@ -1,4 +1,4 @@
-package LoggingAdvanceLibrary;
+package LoggingAdvanceLibrary.Logs;
 
 public interface LogTarget {
 

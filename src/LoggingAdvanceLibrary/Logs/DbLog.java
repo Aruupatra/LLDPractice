@@ -1,4 +1,6 @@
-package LoggingAdvanceLibrary;
+package LoggingAdvanceLibrary.Logs;
+
+import LoggingAdvanceLibrary.LogFactory;
 
 public class DbLog implements LogTarget{
     static
